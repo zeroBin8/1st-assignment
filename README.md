@@ -1,2 +1,0 @@
-# 1st-assignment
-status
