@@ -1,58 +1,97 @@
 #include <iostream>
+#include <string>
 
-int status[4] = {};
+int status[4] = {};//0 - HP, 1 - MP, 2 - ATK, 3 - DEF
+std::string statusName[4] = {"HP", "MP", "ATK", "DEF"};
+int MinStatus[4] = { 50, 50, 0, 0 };
+
+int HPpotion = 5;
+int MPpotion = 5;
+
+void setPotion(int count, int* p_HPPotion, int* p_MPPotion)
+{
+	if (count == 1)
+	{
+		*p_HPPotion -= 1;
+		HPpotion = *p_HPPotion;
+	}
+	else
+	{
+		*p_MPPotion -= 1;
+		MPpotion = *p_MPPotion;
+	}
+
+}
+
 
 int main() {
-	int HP = 0; // status[0]
-	int MP = 0; // status[1]
-	int ATK = 0; // status[2]
-	int DEF = 0; // status[3]
+	for (int i = 0; i < 4; ++i)
+	{
+		while (true)
+		{
+			std::cout << statusName[i] << "을(를) 입력하세요: ";
+			std::cin >> status[i];
 
-	while (true) {
-		std::cout << "HP를 입력하세요: ";
-		std::cin >> HP;
-		if (HP < 50) {
-			std::cout << "HP가 너무 적습니다. 다시 입력해 주세요.\n";
-			continue;
+			if (status[i] <= MinStatus[i])
+			{
+				std::cout << "입력한 수치가 너무 낮습니다." << statusName[i] << "은(는) " << MinStatus[i] << "보다 커야 합니다." << std::endl;
+				continue;
+			}
+			else
+			{
+				break;
+			}
 		}
-		status[0] = HP;
-		break;
 	}
 
-	while (true) {
-		std::cout << "MP를 입력하세요: ";
-		std::cin >> MP;
-		if (MP < 50) {
-			std::cout << "MP가 너무 적습니다. 다시 입력해 주세요.\n";
-			continue;
-		}
-		status[1] = MP;
-		break;
-	}
+	std::cout << "* 포션이 지급되었습니다. (HP, MP 포션 각 5개)\n" << "=============================================" << std::endl;
+	std::cout << "<스탯 관리 시스템>\n" << "1. HP 회복\n" << "2. MP 회복\n" << "3. HP 강화\n" << "4. MP 강화\n" << "5. 공격 스킬 사용\n" << "6. 종료" << std::endl;
+	//공격 스킬은 MP 50소모
 
-	while (true) {
-		std::cout << "공격력을 입력하세요: ";
-		std::cin >> ATK;
-		if (ATK <= 0) {
-			std::cout << "공격력이 너무 작습니다. 다시 입력해 주세요.\n";
-			continue;
-		}
-		status[2] = ATK;
-		break;
-	}
 
-	while (true) {
-		std::cout << "방어력을 입력하세요: ";
-		std::cin >> DEF;
-		if (DEF <= 0) {
-			std::cout << "방어력이 너무 작습니다. 다시 입력해 주세요.\n";
-			continue;
-		}
-		status[3] = DEF;
-		break;
-	}
+	int choice;
 
-	// 포션과 스탯 관리 시스템 만들기
+	while (true)
+	{
+		std::cout << "번호를 선택해 주세요: ";
+		std::cin >> choice;
+		std::cout << std::endl;
+
+		if (choice == 1)
+		{
+			if (HPpotion <= 0)
+			{
+				std::cout << "HP 포션이 부족합니다" << std::endl;
+				continue;
+			}
+			else
+			{
+				status[0] += 20;
+				setPotion(choice, &HPpotion, &MPpotion);
+				std::cout << "* HP가 20 회복되었습니다. 포션이 1개 차감됩니다.\n";
+				std::cout << "현재 HP: " << status[0] << "\n";
+				std::cout << "남은 포션 수: " << HPpotion << "개" << std::endl;
+				continue;
+			}			
+		}
+		else if (choice == 2)
+		{
+			if (MPpotion <= 0)
+			{
+				std::cout << "MP 포션이 부족합니다" << std::endl;
+				continue;
+			}
+			else
+			{
+				status[0] += 20;
+				setPotion(choice, &HPpotion, &MPpotion);
+				std::cout << "* MP가 20 회복되었습니다. 포션이 1개 차감됩니다.\n";
+				std::cout << "현재 MP: " << status[1] << "\n";
+				std::cout << "남은 포션 수: " << MPpotion << "개" << std::endl;
+				continue;
+			}
+		}
+	}
 
 	return 0;
 }
