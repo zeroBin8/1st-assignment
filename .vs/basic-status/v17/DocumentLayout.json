@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\seodo\\Desktop\\code\\git\\1st-assignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8633D11F-C6F2-44DF-8FC7-AC3881D8EBC3}|basic-status.vcxproj|C:\\Users\\seodo\\Desktop\\code\\git\\1st-assignment\\status.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8633D11F-C6F2-44DF-8FC7-AC3881D8EBC3}|basic-status.vcxproj|solutionrelative:status.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8633D11F-C6F2-44DF-8FC7-AC3881D8EBC3}|basic-status.vcxproj|C:\\Users\\seodo\\Desktop\\code\\git\\1st-assignment\\challenge.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8633D11F-C6F2-44DF-8FC7-AC3881D8EBC3}|basic-status.vcxproj|solutionrelative:challenge.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "status.cpp",
-              "DocumentMoniker": "C:\\Users\\seodo\\Desktop\\code\\git\\1st-assignment\\status.cpp",
-              "RelativeDocumentMoniker": "status.cpp",
-              "ToolTip": "C:\\Users\\seodo\\Desktop\\code\\git\\1st-assignment\\status.cpp",
-              "RelativeToolTip": "status.cpp",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAH8AAAA2AAAAAAAAAA==",
+              "Title": "challenge.cpp",
+              "DocumentMoniker": "C:\\Users\\seodo\\Desktop\\code\\git\\1st-assignment\\challenge.cpp",
+              "RelativeDocumentMoniker": "challenge.cpp",
+              "ToolTip": "C:\\Users\\seodo\\Desktop\\code\\git\\1st-assignment\\challenge.cpp",
+              "RelativeToolTip": "challenge.cpp",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAI4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-11T15:01:28.611Z",
+              "WhenOpened": "2025-08-17T08:10:57.164Z",
               "EditorCaption": ""
             }
           ]

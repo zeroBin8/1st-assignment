@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="challenge.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="status.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
